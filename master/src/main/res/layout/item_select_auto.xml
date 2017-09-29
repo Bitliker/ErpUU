@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/normalItemStyle"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:minHeight="@dimen/itemHeight"
+                android:paddingLeft="8dp">
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/itemLine"
+        android:background="@color/item_line"/>
+
+    <CheckBox
+        android:id="@+id/selectCB"
+        style="@style/commonCheckBoxStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:checked="false"/>
+
+    <TextView
+        android:id="@+id/tagTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/line"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:gravity="center|right"
+        android:lines="1"
+        android:text="tab"
+        android:textColor="@color/textColorHine"
+        android:textSize="@dimen/text_min"/>
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@id/tagTv"
+        android:layout_toRightOf="@id/selectCB"
+        android:ellipsize="end"
+        android:gravity="center|left"
+        android:lines="1"
+        android:text="nameTv"
+        android:textColor="@color/textColorNormal"
+        android:textSize="@dimen/text_normal"/>
+
+    <TextView
+        android:id="@+id/subTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameTv"
+        android:layout_toRightOf="@id/selectCB"
+        android:ellipsize="end"
+        android:gravity="center|left"
+        android:maxLines="4"
+        android:text="subTv"
+        android:textColor="@color/textColorNormal"
+        android:textSize="@dimen/text_min"/>
+</RelativeLayout>

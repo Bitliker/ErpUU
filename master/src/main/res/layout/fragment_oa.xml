@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/base_bg"
+              android:orientation="vertical"
+              tools:context="com.gxut.bitliker.usoftchinauu.ui.fragment.MeFragment">
+
+
+    <TextView
+        android:id="@+id/workTv"
+        style="@style/normalItemStyle"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/icon_work"
+        android:drawablePadding="10dp"
+        android:drawableRight="@drawable/icon_next"
+        android:gravity="center|left"
+        android:padding="@dimen/itemPadding"
+        android:text="行政办公"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/text_big"/>
+
+
+    <TextView
+        android:id="@+id/inputFormTv"
+        style="@style/normalItemStyle"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/icon_leave"
+        android:drawablePadding="10dp"
+        android:drawableRight="@drawable/icon_next"
+        android:gravity="center|left"
+        android:padding="@dimen/itemPadding"
+        android:text="办公单据"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/text_big"/>
+
+    <TextView
+        android:id="@+id/taskTv"
+        style="@style/normalItemStyle"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/icon_task"
+        android:drawablePadding="10dp"
+        android:drawableRight="@drawable/icon_next"
+        android:gravity="center|left"
+        android:padding="@dimen/itemPadding"
+        android:text="待办工作"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/text_big"
+        android:visibility="gone"/>
+
+
+    <TextView
+        android:id="@+id/dailyTv"
+        style="@style/normalItemStyle"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/icon_daily"
+        android:drawablePadding="10dp"
+        android:drawableRight="@drawable/icon_next"
+        android:gravity="center|left"
+        android:padding="@dimen/itemPadding"
+        android:text="工作日报"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/text_big"/>
+
+
+    />
+</LinearLayout>

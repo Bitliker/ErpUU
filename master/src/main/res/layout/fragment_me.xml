@@ -1,0 +1,136 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.gxut.bitliker.usoftchinauu.ui.fragment.MeFragment">
+
+    <RelativeLayout
+        android:id="@+id/user_rl"
+        style="@style/normalItemStyle"
+        android:padding="@dimen/itemPadding">
+
+        <TextView
+            android:id="@+id/userTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/itemPadding"
+            android:drawableLeft="@drawable/icon_company"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="当前人员"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_big"/>
+
+        <com.gxut.bitliker.usoftchinauu.ui.widget.SwitchView
+            android:id="@+id/autoSW"
+            android:layout_width="50dp"
+            android:layout_height="400dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/company_rl"
+        style="@style/normalItemStyle"
+        android:padding="@dimen/itemPadding">
+
+        <TextView
+            android:id="@+id/company_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/itemPadding"
+            android:drawableLeft="@drawable/icon_company"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="公司"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_big"/>
+
+        <TextView
+            android:id="@+id/companyTv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/itemPadding"
+            android:layout_toRightOf="@id/company_tv"
+            android:drawablePadding="@dimen/drawablePadding"
+            android:drawableRight="@drawable/icon_next"
+            android:gravity="center_vertical|right"
+            android:textColor="@color/textColorHine"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/master_rl"
+        style="@style/normalItemStyle"
+        android:padding="@dimen/itemPadding">
+
+        <TextView
+            android:id="@+id/master_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/itemPadding"
+            android:drawableLeft="@drawable/icon_master"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="账套"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_big"/>
+
+        <TextView
+            android:id="@+id/masterTv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/itemPadding"
+            android:layout_toRightOf="@id/master_tv"
+            android:drawablePadding="@dimen/drawablePadding"
+            android:drawableRight="@drawable/icon_next"
+            android:gravity="center_vertical|right"
+            android:textColor="@color/textColorHine"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/clear_rl"
+        style="@style/normalItemStyle"
+        android:padding="@dimen/itemPadding">
+
+        <TextView
+            android:id="@+id/clear_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/itemPadding"
+            android:drawableLeft="@drawable/icon_master"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="清空缓存"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_big"/>
+
+        <TextView
+            android:id="@+id/clearTv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/itemPadding"
+            android:layout_toRightOf="@id/clear_tv"
+            android:drawablePadding="@dimen/drawablePadding"
+            android:drawableRight="@drawable/icon_next"
+            android:gravity="center_vertical|right"
+            android:textColor="@color/textColorHine"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/unLoginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_bule_bg"
+        android:text="退出登录"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_big"/>
+</LinearLayout>

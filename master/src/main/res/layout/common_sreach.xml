@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="?attr/actionBarSize"
+              android:background="@color/base_bg"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical"
+              android:padding="5dp">
+
+    <com.gxut.bitliker.usoftchinauu.ui.widget.ClearEditText
+        android:id="@+id/sreachEt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/bg_search"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
+</LinearLayout>

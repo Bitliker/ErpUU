@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="dialogTheme">@style/commontDialog</item>
+        <item name="editTextStyle">@style/commontEditText</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:actionBarSize">40dp</item>
+        <item name="android:windowContentOverlay">@null</item> <!--去除阴影-->
+    </style>
+
+    <style name="commontDialog" parent="AlertDialog.AppCompat">
+        <item name="android:textColorAlertDialogListItem">@color/item_line</item>
+        <item name="android:textColor">@color/item_line</item>
+        <item name="colorAccent">@color/item_line</item>
+    </style>
+
+    <style name="commontEditText" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/item_line</item>
+    </style>
+
+
+</resources>

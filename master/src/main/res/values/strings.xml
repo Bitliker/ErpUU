@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">UU互联</string>
+    <string name="submit">提交</string>
+    <string name="work">打卡签到</string>
+    <string name="work1">打卡签到1</string>
+    <string name="work2">打卡签到2</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="dialog_title">友情提示</string>
+    <string name="address_refresh"><u>地点微调</u></string>
+
+
+</resources>

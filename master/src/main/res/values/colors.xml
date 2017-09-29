@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1E90FF</color>
+    <color name="colorPrimaryDark">#1E90FF</color>
+    <color name="colorAccent">#00688B</color>
+
+    <color name="textColorPrimary">#424242</color>
+    <color name="textColorHighlight">#0A0A0A</color>
+    <color name="textColorHine">#787878</color>
+    <color name="textColorNormal">#808A87</color>
+
+    <color name="sky_blue">#66CCFF</color>
+    <color name="base_bg">#EBE9E9</color>
+    <color name="cyan">#3C97D7</color> <!-- 青蓝色 -->
+    <color name="btn_press">#908f8f</color>
+    <color name="white">#FFFFFF</color>
+    <color name="item_line">#BFD3D3D3</color>
+    <color name="pass">#1296db</color>
+    <color name="noPass">#515151</color>
+    <color name="itemNormal">#FAF9F9</color>
+    <color name="itemPress">#DFDEDE</color>
+    <color name="yellowLine">#f17e21</color>
+</resources>

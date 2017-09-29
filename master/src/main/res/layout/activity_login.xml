@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical"
+    tools:context="com.gxut.bitliker.usoftchinauu.ui.activity.LoginActivity">
+
+    <com.gxut.bitliker.usoftchinauu.ui.widget.ClearEditText
+        android:id="@+id/account_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginTop="40dp"
+        android:drawableLeft="@drawable/account"
+        android:drawablePadding="15dp"
+        android:hint="请输入手机号"
+        android:imeOptions="actionNext"
+        android:inputType="phone"
+        android:lines="1"
+        android:maxLines="1"
+        android:nextFocusForward="@+id/password_et"
+        android:padding="10dp"
+        android:textSize="@dimen/text_big"/>
+
+    <com.gxut.bitliker.usoftchinauu.ui.widget.ClearEditText
+        android:id="@+id/password_et"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/password"
+        android:drawablePadding="15dp"
+        android:hint="请输入密码"
+        android:imeOptions="actionGo"
+        android:lines="1"
+        android:padding="10dp"
+        android:textSize="@dimen/text_big"/>
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_bule_bg"
+        android:text="登  录"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_big"/>
+</LinearLayout>

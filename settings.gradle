@@ -1,0 +1,8 @@
+//主工程
+include ':master'
+
+//模块
+include  ':poplibrary'
+//库工程
+
+project(':poplibrary').projectDir = new File('modular/poplibrary')

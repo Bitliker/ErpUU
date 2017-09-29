@@ -1,0 +1,21 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.1'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.6.0'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url 'https://dl.bintray.com/gxut/ui' }
+        maven { url 'https://dl.bintray.com/gxut/code' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

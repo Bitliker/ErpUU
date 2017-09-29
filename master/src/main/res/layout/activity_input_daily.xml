@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            style="@style/baseStyle"
+            tools:context="com.gxut.bitliker.usoftchinauu.ui.activity.InputDailyActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/commentTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="工作总结:"
+            android:textSize="@dimen/text_big"/>
+
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/commentET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorPrimary"
+            android:layout_below="@id/commentTV"
+            android:background="@color/itemNormal"
+            android:gravity="top"
+            android:hint="输入总结"
+            android:minLines="4"
+            android:padding="@dimen/itemPadding"/>
+
+        <TextView
+            android:id="@+id/planTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/commentET"
+            android:layout_marginTop="@dimen/itemPadding"
+            android:text="工作计划:"
+            android:textSize="@dimen/text_big"/>
+
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/planET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/planTV"
+            android:textColor="@color/textColorPrimary"
+            android:background="@color/itemNormal"
+            android:gravity="top"
+            android:hint="输入计划"
+            android:minLines="4"
+            android:padding="@dimen/itemPadding"/>
+
+        <TextView
+            android:id="@+id/experienceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/planET"
+            android:layout_marginTop="@dimen/itemPadding"
+            android:text="工作心得:"
+            android:textSize="@dimen/text_big"/>
+
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/experienceET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/experienceTV"
+            android:textColor="@color/textColorPrimary"
+            android:background="@color/itemNormal"
+            android:gravity="top"
+            android:hint="输入心得"
+            android:minLines="4"
+            android:padding="@dimen/itemPadding"/>
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/experienceET"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_bule_bg"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_big"/>
+    </RelativeLayout>
+
+</ScrollView>

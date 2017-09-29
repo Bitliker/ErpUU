@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+    <ImageView
+        android:id="@+id/start_spot"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/icon_spot"/>
+
+
+    <ImageView
+        android:id="@+id/end_spot"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_below="@id/start_spot"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/icon_spot"/>
+
+
+    <TextView
+        android:id="@+id/workTimeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/start_spot"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@id/start_spot"
+        android:text="workTimeTv"
+        />
+
+    <TextView
+        android:id="@+id/workSigninTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/start_spot"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/start_spot"
+        android:text="workSigninTv"
+        />
+
+    <TextView
+        android:id="@+id/endTimeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/end_spot"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@id/end_spot"
+        android:text="workTimeTv"
+        />
+
+    <TextView
+        android:id="@+id/endSigninTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/end_spot"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/end_spot"
+        android:text="workSigninTv"
+        />
+</RelativeLayout>

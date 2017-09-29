@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+apply from: rootProject.getRootDir().getAbsolutePath() + "/utils.gradle"
+apply plugin: 'com.jakewharton.butterknife'
+android {
+    compileSdkVersion versions.compileSdkVersion
+    buildToolsVersion versions.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.gxut.bitliker.usoftchinauu"
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode versions.versionCode
+        versionName versions.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main() {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':poplibrary')
+    compile compiles.appcompatV7
+    compile compiles.appcompatV4
+    compile compiles.butterknife
+    annotationProcessor compiles.butterknifeCompiler
+
+    compile 'com.gxut.ui:recyclerlibrary:v1.0'
+    compile 'com.gxut.code:baseutil:v1.1'
+    compile 'com.gxut.code:httpclient:v1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+}

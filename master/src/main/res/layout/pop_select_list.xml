@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/itemNormal"
+                android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="请选择"
+        android:textSize="@dimen/text_big"/>
+
+    <TextView
+        android:id="@+id/selectAllTV"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:text="全选"
+        android:textColor="@color/sky_blue"
+        android:textSize="@dimen/text_big"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/contentLV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTV"
+        android:layout_marginTop="20dp"
+        android:divider="@color/item_line"
+        android:dividerHeight="1px"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@id/contentLV"
+        android:layout_marginTop="10dp"
+        android:background="@color/item_line"/>
+
+    <LinearLayout
+        android:id="@+id/operationLL"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/line"
+        android:orientation="horizontal"
+        android:textSize="@dimen/text_big">
+
+        <TextView
+            android:id="@+id/cancelTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:textSize="@dimen/text_big"/>
+
+        <View
+            android:layout_width="2px"
+            android:layout_height="match_parent"
+            android:background="@color/item_line"/>
+
+        <TextView
+            android:id="@+id/sureTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textSize="@dimen/text_big"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/base_bg"
+                tools:context="com.gxut.bitliker.usoftchinauu.ui.activity.MainActivity">
+
+    <RadioGroup
+        android:id="@+id/indicator_rg"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_bar"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <RadioButton
+            android:id="@+id/news_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/news"
+            android:gravity="center"
+            android:text="新闻"
+            android:textColor="@color/pass"
+            android:textSize="@dimen/text_min"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/oa_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/oa"
+            android:gravity="center"
+            android:text="办公"
+            android:textColor="@color/pass"
+            android:textSize="@dimen/text_min" />
+
+        <RadioButton
+            android:id="@+id/me_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/me"
+            android:gravity="center"
+            android:text="我的"
+            android:textColor="@color/noPass"
+            android:textSize="@dimen/text_min" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/content_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/indicator_rg" />
+
+</RelativeLayout>

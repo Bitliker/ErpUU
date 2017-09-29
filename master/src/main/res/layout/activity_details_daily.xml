@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                style="@style/baseStyle"
+                tools:context="com.gxut.bitliker.usoftchinauu.ui.activity.DetailsDailyActivity">
+
+
+    <LinearLayout
+        android:id="@+id/operationLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/uncommitBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/base_bg"
+            android:gravity="center"
+            android:text="反提交"/>
+
+        <Button
+            android:id="@+id/deleteBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/base_bg"
+            android:gravity="center"
+            android:text="删除"/>
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/operationLL">
+
+        <RelativeLayout
+            style="@style/baseStyle"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/timeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/itemPadding"
+                android:layout_marginTop="@dimen/itemPadding"
+                android:text="时间"
+                android:textSize="@dimen/text_big"/>
+
+            <TextView
+                android:id="@+id/statusTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/itemPadding"
+                android:layout_marginTop="@dimen/itemPadding"
+                android:text="状态"
+                android:textColor="@color/yellowLine"
+                android:textSize="@dimen/text_big"/>
+
+
+            <View
+                android:id="@+id/timeLine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemLine"
+                android:layout_below="@id/timeTV"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/item_line"/>
+
+            <TextView
+                android:id="@+id/summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timeLine"
+                android:layout_marginTop="@dimen/itemPadding"
+                android:text="工作总结:"
+                android:textSize="@dimen/text_big"/>
+
+            <TextView
+                android:id="@+id/summaryTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/summary"
+                android:gravity="top"
+                android:padding="@dimen/itemPadding"/>
+
+            <View
+                android:id="@+id/summaryLine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemLine"
+                android:layout_below="@id/summaryTV"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/item_line"/>
+
+            <TextView
+                android:id="@+id/plan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/summaryLine"
+                android:layout_marginTop="@dimen/itemPadding"
+                android:text="工作计划:"
+                android:textSize="@dimen/text_big"/>
+
+            <TextView
+                android:id="@+id/planTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/plan"
+                android:gravity="top"
+                android:padding="@dimen/itemPadding"/>
+
+            <View
+                android:id="@+id/planLine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemLine"
+                android:layout_below="@id/planTV"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/item_line"/>
+
+            <TextView
+                android:id="@+id/experience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/planLine"
+                android:layout_marginTop="@dimen/itemPadding"
+                android:text="工作心得:"
+                android:textSize="@dimen/text_big"/>
+
+            <TextView
+                android:id="@+id/experienceTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/experience"
+                android:gravity="top"
+                android:padding="@dimen/itemPadding"/>
+
+            <View
+                android:id="@+id/experienceLine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemLine"
+                android:layout_below="@id/experienceTV"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/item_line"/>
+
+
+            <WebView
+                android:id="@+id/contentWeb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/experienceLine"
+                android:background="@color/base_bg"
+                android:gravity="top"
+                android:padding="@dimen/itemPadding"
+                android:visibility="gone"/>
+
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

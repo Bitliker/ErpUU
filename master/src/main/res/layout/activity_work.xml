@@ -1,0 +1,104 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical"
+    tools:context="com.gxut.bitliker.usoftchinauu.ui.activity.MeFragment">
+
+    <TextView
+        android:id="@+id/calendarTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/item_line"
+        android:drawableLeft="@drawable/icon_date"
+        android:drawablePadding="10dp"
+        android:drawableRight="@drawable/icon_next"
+        android:padding="5dp"
+        android:textSize="@dimen/text_big"/>
+
+
+    <TextView
+        android:id="@+id/addressRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/address_refresh"
+        android:textColor="@color/yellowLine"
+        android:textSize="@dimen/text_min"/>
+
+    <TextView
+        android:id="@+id/distanceTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/addressRefresh"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/addressRefresh"
+        android:drawableLeft="@drawable/icon_distance"
+        android:drawablePadding="8dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:paddingLeft="10dp"
+        android:text="距离公司"
+        android:textSize="@dimen/text_min"/>
+
+    <TextView
+        android:id="@+id/addressTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/distanceTv"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:drawableLeft="@drawable/icon_address"
+        android:drawablePadding="8dp"
+        android:paddingLeft="10dp"
+        android:text="当前位置"
+        android:textSize="@dimen/text_min"/>
+
+    <Button
+        android:id="@+id/signinBtn"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_above="@id/addressTv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_round_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="打 卡"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_big"/>
+
+    <View
+        android:layout_width="2px"
+        android:layout_height="match_parent"
+        android:layout_above="@id/signinBtn"
+        android:layout_below="@id/calendarTV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:background="@color/item_line"/>
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/signinBtn"
+        android:layout_below="@id/calendarTV"
+        android:layout_marginBottom="10dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/workRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>

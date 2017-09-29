@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/baseStyle"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false">
+
+    <TextView
+        android:id="@+id/tagTV"
+        style="@style/inputformTagTextStyle"
+        android:focusableInTouchMode="false"
+        android:text="idTag"/>
+
+    <TextView
+        android:id="@+id/contentTV"
+        style="@style/inputformTagTextStyle"
+        android:layout_toRightOf="@id/tagTV"
+        android:focusableInTouchMode="false"
+        android:text="idTV"
+        android:textColor="@color/textColorPrimary"/>
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                style="@style/baseStyle"
+                tools:context="com.gxut.bitliker.usoftchinauu.ui.activity.ListDailyActivity">
+
+    <com.gxut.bitliker.usoftchinauu.ui.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.module.recyclerlibrary.ui.refresh.smart.SmartRefreshLayout
+        android:id="@+id/refreshView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchView">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/listRV"
+            android:layout_width="match_parent"
+            android:focusableInTouchMode="true"
+            android:layout_height="match_parent"/>
+    </com.module.recyclerlibrary.ui.refresh.smart.SmartRefreshLayout>
+
+</RelativeLayout>
