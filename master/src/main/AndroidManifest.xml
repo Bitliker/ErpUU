@@ -49,7 +49,7 @@
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="TUlZfEFaQoM39mOo0f9842X05EFvqIq3" />
+            android:value="@string/baidu_ak" />
 
         <receiver
             android:name=".service.AutoTaskReceiver"
@@ -83,8 +83,7 @@
             android:name=".ui.activity.OAListActivity"
             android:label="办公单据" />
         <activity android:name=".ui.activity.FormDetailActivity" />
-        <activity android:name=".ui.test.TestActivity" />
-        <activity android:name=".ui.test.approval.TestApprovalActivity"></activity>
+
     </application>
 
 </manifest>

@@ -32,180 +32,181 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ListDailyActivity extends BaseActivity implements OnHttpCallback, BaseSelectAdapter.OnItemClickListener<Daily> {
-    private final int TAG_PAGEINDEX = 1;
-    private final int LOAD_DATA = 11;
-    @BindView(R.id.searchView)
-    SearchView searchView;
-    @BindView(R.id.listRV)
-    RecyclerView listRV;
-    @BindView(R.id.refreshView)
-    SmartRefreshLayout refreshView;
-    private int pageIndex;
-    private BaseSelectAdapter<Daily> mAdapter;
+	private final int TAG_PAGEINDEX = 1;
+	private final int LOAD_DATA = 11;
+	@BindView(R.id.searchView)
+	SearchView searchView;
+	@BindView(R.id.listRV)
+	RecyclerView listRV;
+	@BindView(R.id.refreshView)
+	SmartRefreshLayout refreshView;
+	private int pageIndex;
+	private BaseSelectAdapter<Daily> mAdapter;
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_add, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.menu_add, menu);
+		return super.onCreateOptionsMenu(menu);
+	}
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (R.id.add == item.getItemId()) {
-            startActivity(new Intent(ct, InputWorkActivity.class));
-        }
-        return super.onOptionsItemSelected(item);
-    }
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		if (R.id.add == item.getItemId()) {
+			startActivity(new Intent(ct, InputDailyActivity.class));
+			finish();
+		}
+		return super.onOptionsItemSelected(item);
+	}
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_base_list);
-        ButterKnife.bind(this);
-        initView();
-        initEvent();
-    }
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_base_list);
+		ButterKnife.bind(this);
+		initView();
+		initEvent();
+	}
 
-    private void initEvent() {
-        searchView.setChangedListener(new SearchView.OnTextChangedListener() {
-            @Override
-            public void onTextChanged(String s) {
+	private void initEvent() {
+		searchView.setChangedListener(new SearchView.OnTextChangedListener() {
+			@Override
+			public void onTextChanged(String s) {
 
-            }
-        });
-        refreshView.setOnRefreshListener(new SmartRefreshLayout.onRefreshListener() {
-            @Override
-            public void onRefresh() {
-                ListDailyActivity.this.onRefresh();
-            }
+			}
+		});
+		refreshView.setOnRefreshListener(new SmartRefreshLayout.onRefreshListener() {
+			@Override
+			public void onRefresh() {
+				ListDailyActivity.this.onRefresh();
+			}
 
-            @Override
-            public void onLoadMore() {
-                ListDailyActivity.this.onLoadMore();
-            }
-        });
-    }
+			@Override
+			public void onLoadMore() {
+				ListDailyActivity.this.onLoadMore();
+			}
+		});
+	}
 
-    private void initView() {
-        listRV.setLayoutManager(new LinearLayoutManager(this));
-        listRV.setItemAnimator(new DefaultItemAnimator());
-        pageIndex = 1;
-        loadData();
-    }
+	private void initView() {
+		listRV.setLayoutManager(new LinearLayoutManager(this));
+		listRV.setItemAnimator(new DefaultItemAnimator());
+		pageIndex = 1;
+		loadData();
+	}
 
-    private void onRefresh() {
-        pageIndex = 1;
-        loadData();
-    }
+	private void onRefresh() {
+		pageIndex = 1;
+		loadData();
+	}
 
-    private void onLoadMore() {
-        pageIndex++;
-        loadData();
-    }
-
-
-    private void loadData() {
-        if (!refreshView.isRefreshing()) {
-            showProgress();
-        }
-        HttpClient.api().request(new Parameter.Builder()
-                .url(UrlHelper.api().getWorkDailyUrl())
-                .addParams("emcode", AppConfig.api().getLoginUser().getEmCode())
-                .addParams("pageIndex", pageIndex)
-                .mode(Parameter.GET)
-                .addTag(TAG_PAGEINDEX, pageIndex)
-                .record(LOAD_DATA)
-                .bulid(), this);
-    }
+	private void onLoadMore() {
+		pageIndex++;
+		loadData();
+	}
 
 
-    @Override
-    public void onSuccess(Success success) {
-        hideProgress();
-        switch (success.getRecord()) {
-            case LOAD_DATA:
-                handlerWorkDaily(success.getJSONArray("listdata"));
-                break;
-        }
-    }
-
-    @Override
-    public void onFailure(Failure failure) {
-        hideProgress();
-        showMessage(failure.getMessage());
-    }
+	private void loadData() {
+		if (!refreshView.isRefreshing()) {
+			showProgress();
+		}
+		HttpClient.api().request(new Parameter.Builder()
+				.url(UrlHelper.api().getWorkDailyUrl())
+				.addParams("emcode", AppConfig.api().getLoginUser().getEmCode())
+				.addParams("pageIndex", pageIndex)
+				.mode(Parameter.GET)
+				.addTag(TAG_PAGEINDEX, pageIndex)
+				.record(LOAD_DATA)
+				.bulid(), this);
+	}
 
 
-    private void handlerWorkDaily(JSONArray listdata) {
-        if (Utils.isEmpty(listdata)) {
-            if (pageIndex > 1) {
-                pageIndex--;
-            }
-            stopLoading();
-        } else {
-            List<BaseSelectModel<Daily>> dailys = new ArrayList<>();
-            for (int i = 0; i < listdata.size(); i++) {
-                Daily data = new Daily(listdata.getJSONObject(i));
-                if (!data.isEmpty()) {
-                    BaseSelectModel<Daily> baseModel = new BaseSelectModel<>(
-                            data.getDate()
-                            , data.getComment()
-                            , data.getStatus());
-                    baseModel.setData(data);
-                    dailys.add(baseModel);
-                }
-            }
-            setData2Adapter(dailys);
-        }
-    }
+	@Override
+	public void onSuccess(Success success) {
+		hideProgress();
+		switch (success.getRecord()) {
+			case LOAD_DATA:
+				handlerWorkDaily(success.getJSONArray("listdata"));
+				break;
+		}
+	}
 
-    private void setData2Adapter(List<BaseSelectModel<Daily>> dailys) {
-        if (mAdapter == null) {
-            mAdapter = new BaseSelectAdapter.Builder<Daily>(ct)
-                    .setMulti(false)
-                    .setShowCb(false)
-                    .setAutoHeight(true)
-                    .setModels(dailys)
-                    .setOnItemClickListener(this)
-                    .builder();
-            listRV.setAdapter(mAdapter);
-        } else {
-            if (pageIndex == 1) {
-                mAdapter.setModels(dailys);
-                mAdapter.notifyDataSetChanged();
-            } else {
-                mAdapter.addModels(dailys);
-            }
-        }
-        stopLoading();
-    }
+	@Override
+	public void onFailure(Failure failure) {
+		hideProgress();
+		showMessage(failure.getMessage());
+	}
 
-    private void stopLoading() {
-        refreshView.stopRefresh();
-    }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == 20 && resultCode == 20) {
-            pageIndex = 1;
-            loadData();
-        }
-        super.onActivityResult(requestCode, resultCode, data);
-    }
+	private void handlerWorkDaily(JSONArray listdata) {
+		if (Utils.isEmpty(listdata)) {
+			if (pageIndex > 1) {
+				pageIndex--;
+			}
+			stopLoading();
+		} else {
+			List<BaseSelectModel<Daily>> dailys = new ArrayList<>();
+			for (int i = 0; i < listdata.size(); i++) {
+				Daily data = new Daily(listdata.getJSONObject(i));
+				if (!data.isEmpty()) {
+					BaseSelectModel<Daily> baseModel = new BaseSelectModel<>(
+							data.getDate()
+							, data.getComment()
+							, data.getStatus());
+					baseModel.setData(data);
+					dailys.add(baseModel);
+				}
+			}
+			setData2Adapter(dailys);
+		}
+	}
 
-    @Override
-    public void itemClick(BaseSelectModel<Daily> model, int position) {
-        if (model == null) return;
-        Daily daily = model.getData();
-        if ("在录入".equals(daily.getStatus())) {
-            startActivity(new Intent(ct, InputDailyActivity.class)
-                    .putExtra("id", daily.getId())
-                    .putExtra("summary", daily.getComment())
-                    .putExtra("plan", daily.getPlan())
-                    .putExtra("experience", daily.getExperience()));
-        } else {
-            startActivityForResult(new Intent(ct, DetailsDailyActivity.class)
-                    .putExtra("model", daily), 20);
-        }
-    }
+	private void setData2Adapter(List<BaseSelectModel<Daily>> dailys) {
+		if (mAdapter == null) {
+			mAdapter = new BaseSelectAdapter.Builder<Daily>(ct)
+					.setMulti(false)
+					.setShowCb(false)
+					.setAutoHeight(true)
+					.setModels(dailys)
+					.setOnItemClickListener(this)
+					.builder();
+			listRV.setAdapter(mAdapter);
+		} else {
+			if (pageIndex == 1) {
+				mAdapter.setModels(dailys);
+				mAdapter.notifyDataSetChanged();
+			} else {
+				mAdapter.addModels(dailys);
+			}
+		}
+		stopLoading();
+	}
+
+	private void stopLoading() {
+		refreshView.stopRefresh();
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (requestCode == 20 && resultCode == 20) {
+			pageIndex = 1;
+			loadData();
+		}
+		super.onActivityResult(requestCode, resultCode, data);
+	}
+
+	@Override
+	public void itemClick(BaseSelectModel<Daily> model, int position) {
+		if (model == null) return;
+		Daily daily = model.getData();
+		if ("在录入".equals(daily.getStatus())) {
+			startActivity(new Intent(ct, InputDailyActivity.class)
+					.putExtra("id", daily.getId())
+					.putExtra("summary", daily.getComment())
+					.putExtra("plan", daily.getPlan())
+					.putExtra("experience", daily.getExperience()));
+		} else {
+			startActivityForResult(new Intent(ct, DetailsDailyActivity.class)
+					.putExtra("model", daily), 20);
+		}
+	}
 }

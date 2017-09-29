@@ -86,7 +86,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/summary"
                 android:gravity="top"
-                android:padding="@dimen/itemPadding"/>
+                android:padding="@dimen/itemPadding"
+                android:textIsSelectable="true"/>
 
             <View
                 android:id="@+id/summaryLine"
@@ -112,7 +113,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/plan"
                 android:gravity="top"
-                android:padding="@dimen/itemPadding"/>
+                android:padding="@dimen/itemPadding"
+                android:textIsSelectable="true"/>
 
             <View
                 android:id="@+id/planLine"
@@ -138,7 +140,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/experience"
                 android:gravity="top"
-                android:padding="@dimen/itemPadding"/>
+                android:padding="@dimen/itemPadding"
+                android:textIsSelectable="true"/>
 
             <View
                 android:id="@+id/experienceLine"

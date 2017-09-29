@@ -26,6 +26,7 @@
             android:background="@color/itemNormal"
             android:gravity="top"
             android:hint="输入总结"
+            android:textSize="@dimen/text_min"
             android:minLines="4"
             android:padding="@dimen/itemPadding"/>
 
@@ -48,6 +49,7 @@
             android:background="@color/itemNormal"
             android:gravity="top"
             android:hint="输入计划"
+            android:textSize="@dimen/text_min"
             android:minLines="4"
             android:padding="@dimen/itemPadding"/>
 
@@ -70,6 +72,7 @@
             android:background="@color/itemNormal"
             android:gravity="top"
             android:hint="输入心得"
+            android:textSize="@dimen/text_min"
             android:minLines="4"
             android:padding="@dimen/itemPadding"/>
 

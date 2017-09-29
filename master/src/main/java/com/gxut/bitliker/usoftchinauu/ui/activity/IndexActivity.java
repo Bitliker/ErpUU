@@ -23,13 +23,5 @@ public class IndexActivity extends BaseActivity {
             startActivity(new Intent(ct, LoginActivity.class));
         else startActivity(new Intent(ct, MainActivity.class));
         finish();
-        //判断版本升级是否
-//        int versionCode = SettingSp.api().getInt(SettingSp.VERSION_CODE, 0);
-//        int appVersion = DeviceUtil.getVersionCode();
-//        if (versionCode == DeviceUtil.getVersionCode()) {
-//        } else {
-//            SettingSp.api().put(SettingSp.VERSION_CODE, appVersion);
-//        }
-
     }
 }

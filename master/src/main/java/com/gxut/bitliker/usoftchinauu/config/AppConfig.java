@@ -9,6 +9,7 @@ import com.gxut.bitliker.httpclient.request.OkHttpRequest;
 import com.gxut.bitliker.usoftchinauu.db.dao.UserDao;
 import com.gxut.bitliker.usoftchinauu.model.User;
 import com.gxut.bitliker.usoftchinauu.network.UrlHelper;
+import com.gxut.bitliker.usoftchinauu.network.interceptor.CommonHttpBoyInterceptor;
 import com.gxut.bitliker.usoftchinauu.network.interceptor.LogInterceptor;
 
 
@@ -49,7 +50,7 @@ public class AppConfig extends BaseApplication {
 
     private void initNetWork() {
         HttpClient.init(new OkHttpRequest.Builder()
-//                .addInterceptors(new CommonHttpBoyInterceptor())
+                .addInterceptors(new CommonHttpBoyInterceptor())
                 .addInterceptors(new LogInterceptor())
                 .builder());
     }
