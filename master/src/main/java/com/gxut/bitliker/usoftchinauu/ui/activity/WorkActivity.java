@@ -10,9 +10,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.gxut.bitliker.baseutil.ui.base.BaseActivity;
-import com.gxut.bitliker.baseutil.util.TimeUtil;
-import com.gxut.bitliker.baseutil.util.Utils;
+import com.gxut.code.baseutil.ui.base.BaseActivity;
+import com.gxut.code.baseutil.util.TimeUtil;
+import com.gxut.code.baseutil.util.Utils;
 import com.gxut.bitliker.usoftchinauu.R;
 import com.gxut.bitliker.usoftchinauu.adapter.WorkAdapter;
 import com.gxut.bitliker.usoftchinauu.config.LocationHelper;

@@ -37,8 +37,10 @@ dependencies {
     compile compiles.butterknife
     annotationProcessor compiles.butterknifeCompiler
 
-    compile 'com.gxut.ui:recyclerlibrary:v1.0'
-    compile 'com.gxut.code:baseutil:v1.1'
-    compile 'com.gxut.code:httpclient:v1.0'
+    compile 'com.gxut.code:network:v2.0'
+    compile 'com.gxut.ui:refreshlayout:v1.0'
+    compile 'com.gxut.code:baseutil:v2.0'
+    compile 'com.gxut.ui:commonui:v0.5'
+
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }

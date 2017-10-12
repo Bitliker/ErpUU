@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.gxut.bitliker.baseutil.util.Utils;
+import com.gxut.code.baseutil.util.Utils;
 import com.gxut.bitliker.usoftchinauu.R;
 import com.gxut.bitliker.usoftchinauu.model.Work;
 

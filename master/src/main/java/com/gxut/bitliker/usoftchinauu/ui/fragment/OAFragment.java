@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.gxut.bitliker.baseutil.ui.base.BaseFragment;
+import com.gxut.code.baseutil.ui.base.BaseFragment;
 import com.gxut.bitliker.usoftchinauu.R;
 import com.gxut.bitliker.usoftchinauu.ui.activity.InputDailyActivity;
 import com.gxut.bitliker.usoftchinauu.ui.activity.OAListActivity;

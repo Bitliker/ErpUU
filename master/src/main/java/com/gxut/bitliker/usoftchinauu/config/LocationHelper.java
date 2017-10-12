@@ -7,8 +7,8 @@ import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
 import com.baidu.mapapi.model.LatLng;
-import com.gxut.bitliker.baseutil.util.LogUtil;
-import com.gxut.bitliker.baseutil.util.Utils;
+import com.gxut.code.baseutil.util.LogUtil;
+import com.gxut.code.baseutil.util.Utils;
 import com.gxut.bitliker.usoftchinauu.model.Locale;
 
 /**

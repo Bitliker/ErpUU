@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.support.v4.content.LocalBroadcastManager;
 
-import com.gxut.bitliker.baseutil.util.Utils;
+import com.gxut.code.baseutil.util.Utils;
 
 /**
  * Created by Bitliker on 2017/6/22.

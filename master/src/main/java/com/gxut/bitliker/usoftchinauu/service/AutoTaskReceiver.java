@@ -4,7 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.gxut.bitliker.baseutil.util.LogUtil;
+import com.gxut.code.baseutil.util.LogUtil;
 import com.gxut.bitliker.usoftchinauu.config.SettingSp;
 
 ;

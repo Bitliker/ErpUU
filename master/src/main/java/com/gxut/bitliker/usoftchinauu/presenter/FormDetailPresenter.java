@@ -6,21 +6,21 @@ import android.widget.PopupWindow;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.gxut.bitliker.baseutil.ui.base.BaseActivity;
-import com.gxut.bitliker.baseutil.util.JSONUtil;
-import com.gxut.bitliker.baseutil.util.LogUtil;
-import com.gxut.bitliker.baseutil.util.Utils;
-import com.gxut.bitliker.httpclient.HttpClient;
-import com.gxut.bitliker.httpclient.request.Parameter;
-import com.gxut.bitliker.httpclient.response.Failure;
-import com.gxut.bitliker.httpclient.response.OnHttpCallback;
-import com.gxut.bitliker.httpclient.response.Success;
 import com.gxut.bitliker.usoftchinauu.model.BaseSelectModel;
 import com.gxut.bitliker.usoftchinauu.model.FormDetail;
 import com.gxut.bitliker.usoftchinauu.network.UrlHelper;
 import com.gxut.bitliker.usoftchinauu.presenter.imp.IFormDetail;
 import com.gxut.bitliker.usoftchinauu.ui.activity.ListFormDetailActivity;
 import com.gxut.bitliker.usoftchinauu.util.SelectPopupBuilder;
+import com.gxut.code.baseutil.ui.base.BaseActivity;
+import com.gxut.code.baseutil.util.LogUtil;
+import com.gxut.code.baseutil.util.Utils;
+import com.gxut.code.network.HttpClient;
+import com.gxut.code.network.request.Parameter;
+import com.gxut.code.network.response.Failure;
+import com.gxut.code.network.response.OnHttpCallback;
+import com.gxut.code.network.response.Success;
+import com.gxut.code.network.util.JSONUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,7 +35,7 @@ import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
-import static com.gxut.bitliker.baseutil.util.JSONUtil.getText;
+
 
 /**
  * Created by Bitliker on 2017/8/29.
@@ -306,12 +306,12 @@ public class FormDetailPresenter implements OnHttpCallback {
                 int id = JSONUtil.getInt(object, "fd_id", "gd_id");
                 if (JSONUtil.getInt(object, "mfd_isdefault", "mdg_isdefault") == -1) {
                     formDetail = new FormDetail(hasGroup);
-                    String field = getText(object, "fd_field", "dg_field");
-                    String values = JSONUtil.getText(object, "fd_value");
-                    String caption = getText(object, "fd_caption", "dg_caption");
+                    String field = JSONUtil.getText(object, "fd_field", "dg_field");
+                    String values =JSONUtil. getText(object, "fd_value");
+                    String caption =JSONUtil. getText(object, "fd_caption", "dg_caption");
                     formDetail.setValuesKey(field);
                     formDetail.setCaption(caption);
-                    formDetail.setType(getText(object, "fd_type", "dg_type"));
+                    formDetail.setType(JSONUtil.getText(object, "fd_type", "dg_type"));
                     if (!Utils.isEmpty(values)) {
                         formDetail.setValues(values);
                     }
@@ -319,8 +319,8 @@ public class FormDetailPresenter implements OnHttpCallback {
                     if (!Utils.isEmpty(coms)) {
                         for (int j = 0; j < coms.size(); j++) {
                             JSONObject o = coms.getJSONObject(j);
-                            String dlc_value = JSONUtil.getText(o, "DLC_VALUE");
-                            String dlc_display = JSONUtil.getText(o, "DLC_DISPLAY");
+                            String dlc_value =JSONUtil. getText(o, "DLC_VALUE");
+                            String dlc_display =JSONUtil. getText(o, "DLC_DISPLAY");
                             formDetail.addCombostore(new FormDetail.Combostore(dlc_value, dlc_display));
                         }
                     }
@@ -337,9 +337,9 @@ public class FormDetailPresenter implements OnHttpCallback {
         for (int i = 0; i < configs.size(); i++) {
             JSONObject o = configs.getJSONObject(i);
             if (JSONUtil.getInt(o, "MFD_ISDEFAULT", "MDG_ISDEFAULT", "mfd_isdefault", "mdg_isdefault") == -1) {
-                String caption = getText(o, "FD_CAPTION", "DG_CAPTION");
-                String valuesKey = getText(o, "FD_FIELD", "DG_FIELD");
-                String values = getText(object, valuesKey);
+                String caption =JSONUtil.getText(o, "FD_CAPTION", "DG_CAPTION");
+                String valuesKey =JSONUtil. getText(o, "FD_FIELD", "DG_FIELD");
+                String values =JSONUtil. getText(object, valuesKey);
                 if (Utils.isEmpty(caption) || Utils.isEmpty(valuesKey) || Utils.isEmpty(values))
                     continue;
                 FormDetail detail = new FormDetail(hasGroup);

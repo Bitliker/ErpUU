@@ -6,9 +6,9 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 
-import com.gxut.bitliker.baseutil.util.LogUtil;
-import com.gxut.bitliker.baseutil.util.SystemUtil;
-import com.gxut.bitliker.baseutil.util.TimeUtil;
+import com.gxut.code.baseutil.util.LogUtil;
+import com.gxut.code.baseutil.util.SystemUtil;
+import com.gxut.code.baseutil.util.TimeUtil;
 import com.gxut.bitliker.usoftchinauu.config.AppConfig;
 import com.gxut.bitliker.usoftchinauu.service.AutoTaskReceiver;
 

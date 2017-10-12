@@ -3,7 +3,7 @@ package com.gxut.bitliker.usoftchinauu.ui.activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.gxut.bitliker.baseutil.ui.base.BaseActivity;
+import com.gxut.code.baseutil.ui.base.BaseActivity;
 import com.gxut.bitliker.usoftchinauu.R;
 import com.gxut.bitliker.usoftchinauu.config.AppConfig;
 

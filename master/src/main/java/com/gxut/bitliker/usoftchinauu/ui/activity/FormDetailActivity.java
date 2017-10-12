@@ -13,8 +13,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-import com.gxut.bitliker.baseutil.ui.base.BaseActivity;
-import com.gxut.bitliker.baseutil.util.Utils;
+import com.gxut.code.baseutil.ui.base.BaseActivity;
+import com.gxut.code.baseutil.util.Utils;
 import com.gxut.bitliker.usoftchinauu.R;
 import com.gxut.bitliker.usoftchinauu.adapter.FormDetailAdapter;
 import com.gxut.bitliker.usoftchinauu.model.FormDetail;

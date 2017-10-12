@@ -9,8 +9,8 @@ import android.view.View;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-import com.gxut.bitliker.baseutil.util.DisplayUtil;
-import com.gxut.bitliker.baseutil.util.Utils;
+import com.gxut.code.baseutil.util.DisplayUtil;
+import com.gxut.code.baseutil.util.Utils;
 import com.gxut.bitliker.usoftchinauu.R;
 import com.gxut.bitliker.usoftchinauu.adapter.BaseSelectAdapter;
 import com.gxut.bitliker.usoftchinauu.model.BaseSelectModel;

@@ -2,7 +2,7 @@ package com.gxut.bitliker.usoftchinauu.ui.fragment;
 
 import android.os.Bundle;
 
-import com.gxut.bitliker.baseutil.ui.base.BaseFragment;
+import com.gxut.code.baseutil.ui.base.BaseFragment;
 import com.gxut.bitliker.usoftchinauu.R;
 
 /**

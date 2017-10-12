@@ -11,7 +11,7 @@ import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.TextView;
 
-import com.gxut.bitliker.baseutil.ui.base.BaseFragment;
+import com.gxut.code.baseutil.ui.base.BaseFragment;
 import com.gxut.bitliker.usoftchinauu.R;
 import com.gxut.bitliker.usoftchinauu.config.AppConfig;
 import com.gxut.bitliker.usoftchinauu.config.BroadcastManager;

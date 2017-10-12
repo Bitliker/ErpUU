@@ -11,9 +11,9 @@ import android.view.KeyEvent;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.gxut.bitliker.baseutil.ui.base.BaseActivity;
-import com.gxut.bitliker.baseutil.ui.base.BaseFragment;
-import com.gxut.bitliker.baseutil.util.PermissionUtil;
+import com.gxut.code.baseutil.ui.base.BaseActivity;
+import com.gxut.code.baseutil.ui.base.BaseFragment;
+import com.gxut.code.baseutil.util.PermissionUtil;
 import com.gxut.bitliker.usoftchinauu.R;
 import com.gxut.bitliker.usoftchinauu.config.LocationHelper;
 import com.gxut.bitliker.usoftchinauu.config.SettingSp;
@@ -84,7 +84,9 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     }
 
     private void initPermission() {
-        String[] permissions = {Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.READ_PHONE_STATE, Manifest.permission.READ_EXTERNAL_STORAGE};
+        String[] permissions = {Manifest.permission.ACCESS_COARSE_LOCATION,
+                Manifest.permission.READ_PHONE_STATE,
+                Manifest.permission.READ_EXTERNAL_STORAGE};
         for (String p : permissions) {
             if (PermissionUtil.lacksPermissions(ct, p)) {
                 PermissionUtil.requestPermission(ct, p);

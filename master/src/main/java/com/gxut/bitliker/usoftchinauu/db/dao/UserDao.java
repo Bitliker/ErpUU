@@ -3,7 +3,7 @@ package com.gxut.bitliker.usoftchinauu.db.dao;
 import android.content.ContentValues;
 import android.database.Cursor;
 
-import com.gxut.bitliker.baseutil.util.Utils;
+import com.gxut.code.baseutil.util.Utils;
 import com.gxut.bitliker.usoftchinauu.config.SettingSp;
 import com.gxut.bitliker.usoftchinauu.db.UserDBTable;
 import com.gxut.bitliker.usoftchinauu.model.User;

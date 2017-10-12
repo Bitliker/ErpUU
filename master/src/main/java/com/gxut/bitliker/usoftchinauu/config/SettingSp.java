@@ -1,6 +1,6 @@
 package com.gxut.bitliker.usoftchinauu.config;
 
-import com.gxut.bitliker.baseutil.util.SpUtil;
+import com.gxut.code.baseutil.util.SpUtil;
 
 /**
  * Created by Bitliker on 2017/6/20.

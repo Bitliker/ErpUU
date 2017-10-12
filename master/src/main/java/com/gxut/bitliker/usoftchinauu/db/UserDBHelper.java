@@ -3,7 +3,7 @@ package com.gxut.bitliker.usoftchinauu.db;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.gxut.bitliker.baseutil.util.Utils;
+import com.gxut.code.baseutil.util.Utils;
 
 /**
  * Created by Bitliker on 2017/6/20.

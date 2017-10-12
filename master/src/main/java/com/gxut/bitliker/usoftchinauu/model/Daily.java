@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import com.alibaba.fastjson.JSONObject;
-import com.gxut.bitliker.baseutil.util.JSONUtil;
+import com.gxut.code.network.util.JSONUtil;
 
 import java.util.HashMap;
 import java.util.Map;

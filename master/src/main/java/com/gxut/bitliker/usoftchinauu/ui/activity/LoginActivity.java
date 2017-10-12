@@ -3,9 +3,9 @@ package com.gxut.bitliker.usoftchinauu.ui.activity;
 import android.os.Bundle;
 import android.text.TextUtils;
 
-import com.gxut.bitliker.baseutil.ui.base.BaseActivity;
-import com.gxut.bitliker.baseutil.util.LogUtil;
-import com.gxut.bitliker.baseutil.util.Utils;
+import com.gxut.code.baseutil.ui.base.BaseActivity;
+import com.gxut.code.baseutil.util.LogUtil;
+import com.gxut.code.baseutil.util.Utils;
 import com.gxut.bitliker.usoftchinauu.R;
 import com.gxut.bitliker.usoftchinauu.config.SettingSp;
 import com.gxut.bitliker.usoftchinauu.ui.widget.ClearEditText;

@@ -2,12 +2,12 @@ package com.gxut.bitliker.usoftchinauu.network.interceptor;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.gxut.bitliker.baseutil.util.JSONUtil;
-import com.gxut.bitliker.baseutil.util.LogUtil;
-import com.gxut.bitliker.baseutil.util.Utils;
 import com.gxut.bitliker.usoftchinauu.config.AppConfig;
 import com.gxut.bitliker.usoftchinauu.db.dao.UserDao;
 import com.gxut.bitliker.usoftchinauu.model.User;
+import com.gxut.code.baseutil.util.LogUtil;
+import com.gxut.code.baseutil.util.Utils;
+import com.gxut.code.network.util.JSONUtil;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;

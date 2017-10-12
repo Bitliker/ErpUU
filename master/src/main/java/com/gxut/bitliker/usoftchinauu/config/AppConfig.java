@@ -3,9 +3,9 @@ package com.gxut.bitliker.usoftchinauu.config;
 import android.content.Intent;
 
 import com.baidu.mapapi.SDKInitializer;
-import com.gxut.bitliker.baseutil.config.BaseApplication;
-import com.gxut.bitliker.httpclient.HttpClient;
-import com.gxut.bitliker.httpclient.request.OkHttpRequest;
+import com.gxut.code.baseutil.config.BaseApplication;
+import com.gxut.code.network.HttpClient;
+import com.gxut.code.network.request.OkHttpRequest;
 import com.gxut.bitliker.usoftchinauu.db.dao.UserDao;
 import com.gxut.bitliker.usoftchinauu.model.User;
 import com.gxut.bitliker.usoftchinauu.network.UrlHelper;

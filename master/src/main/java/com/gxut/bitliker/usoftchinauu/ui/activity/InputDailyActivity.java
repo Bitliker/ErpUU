@@ -12,19 +12,19 @@ import android.widget.PopupWindow;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.gxut.bitliker.baseutil.ui.base.BaseActivity;
-import com.gxut.bitliker.baseutil.util.JSONUtil;
-import com.gxut.bitliker.baseutil.util.Utils;
-import com.gxut.bitliker.httpclient.HttpClient;
-import com.gxut.bitliker.httpclient.request.Parameter;
-import com.gxut.bitliker.httpclient.response.Failure;
-import com.gxut.bitliker.httpclient.response.OnHttpCallback;
-import com.gxut.bitliker.httpclient.response.Success;
 import com.gxut.bitliker.usoftchinauu.R;
 import com.gxut.bitliker.usoftchinauu.config.AppConfig;
 import com.gxut.bitliker.usoftchinauu.model.BaseSelectModel;
 import com.gxut.bitliker.usoftchinauu.network.UrlHelper;
 import com.gxut.bitliker.usoftchinauu.util.SelectPopupBuilder;
+import com.gxut.code.baseutil.ui.base.BaseActivity;
+import com.gxut.code.baseutil.util.Utils;
+import com.gxut.code.network.HttpClient;
+import com.gxut.code.network.request.Parameter;
+import com.gxut.code.network.response.Failure;
+import com.gxut.code.network.response.OnHttpCallback;
+import com.gxut.code.network.response.Success;
+import com.gxut.code.network.util.JSONUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;

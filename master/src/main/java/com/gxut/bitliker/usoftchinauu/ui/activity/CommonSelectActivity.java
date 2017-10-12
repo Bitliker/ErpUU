@@ -4,9 +4,9 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.gxut.bitliker.baseutil.ui.base.BaseActivity;
-import com.gxut.bitliker.baseutil.util.LogUtil;
-import com.module.recyclerlibrary.ui.refresh.smart.SmartRefreshLayout;
+import com.gxut.code.baseutil.ui.base.BaseActivity;
+import com.gxut.code.baseutil.util.LogUtil;
+import com.gxut.ui.refreshlayout.refresh.smart.SmartRefreshLayout;
 import com.gxut.bitliker.usoftchinauu.R;
 import com.gxut.bitliker.usoftchinauu.ui.widget.SearchView;
 

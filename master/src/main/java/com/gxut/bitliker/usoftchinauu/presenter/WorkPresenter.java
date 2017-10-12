@@ -3,15 +3,11 @@ package com.gxut.bitliker.usoftchinauu.presenter;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.baidu.mapapi.model.LatLng;
-import com.gxut.bitliker.baseutil.util.JSONUtil;
-import com.gxut.bitliker.baseutil.util.TimeUtil;
-import com.gxut.bitliker.baseutil.util.Utils;
-import com.gxut.bitliker.httpclient.HttpClient;
-import com.gxut.bitliker.httpclient.request.Parameter;
-import com.gxut.bitliker.httpclient.request.Tags;
-import com.gxut.bitliker.httpclient.response.Failure;
-import com.gxut.bitliker.httpclient.response.OnHttpCallback;
-import com.gxut.bitliker.httpclient.response.Success;
+import com.gxut.code.network.request.Parameter;
+import com.gxut.code.network.request.Tags;
+import com.gxut.code.network.response.Failure;
+import com.gxut.code.network.response.OnHttpCallback;
+import com.gxut.code.network.response.Success;
 import com.gxut.bitliker.usoftchinauu.config.AppConfig;
 import com.gxut.bitliker.usoftchinauu.config.LocationHelper;
 import com.gxut.bitliker.usoftchinauu.model.Locale;
@@ -23,6 +19,10 @@ import com.gxut.bitliker.usoftchinauu.presenter.imp.IWorkView;
 import com.gxut.bitliker.usoftchinauu.ui.activity.InputWorkActivity;
 import com.gxut.bitliker.usoftchinauu.util.AlarmUtil;
 import com.gxut.bitliker.usoftchinauu.util.BDMapUtil;
+import com.gxut.code.baseutil.util.TimeUtil;
+import com.gxut.code.baseutil.util.Utils;
+import com.gxut.code.network.HttpClient;
+import com.gxut.code.network.util.JSONUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -38,7 +38,8 @@ import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
-import static com.gxut.bitliker.baseutil.util.TimeUtil.str2Long;
+
+
 
 /**
  * Created by Bitliker on 2017/6/26.
@@ -320,9 +321,9 @@ public class WorkPresenter implements OnHttpCallback {
                     work = getWorkByKey(object, key);
                     if (work == null) continue;
                     //上班时间到矿工时间
-                    work.setWorkEnd(TimeUtil.long2Str(str2Long(work.getWorkTime(), TimeUtil.HM) + workSet.nonclass * 1000 * 60, TimeUtil.HM));
+                    work.setWorkEnd(TimeUtil.long2Str(TimeUtil.str2Long(work.getWorkTime(), TimeUtil.HM) + workSet.nonclass * 1000 * 60, TimeUtil.HM));
                     //矿工时间到下班时间
-                    work.setOffStart(TimeUtil.long2Str(str2Long(work.getOffTime(), TimeUtil.HM) - workSet.nonclass * 1000 * 60, TimeUtil.HM));
+                    work.setOffStart(TimeUtil.long2Str(TimeUtil.str2Long(work.getOffTime(), TimeUtil.HM) - workSet.nonclass * 1000 * 60, TimeUtil.HM));
                     works.add(work);
                 }
                 handlerWorkLocation(result.getJSONArray("comAddressdata"));
@@ -347,16 +348,16 @@ public class WorkPresenter implements OnHttpCallback {
         String end = null;
         for (int i = 0; i < works.size(); i++) {
             if (i == 0) {
-                start = TimeUtil.long2Str(str2Long(works.get(i).getWorkTime(), TimeUtil.HM) - earlytime * 60 * 1000 * 60, TimeUtil.HM);
+                start = TimeUtil.long2Str(TimeUtil.str2Long(works.get(i).getWorkTime(), TimeUtil.HM) - earlytime * 60 * 1000 * 60, TimeUtil.HM);
             } else {
                 //判断两个的中间
-                long lastEndTime = str2Long(works.get(i - 1).getOffTime(), TimeUtil.HM);
-                long workTime = str2Long(works.get(i).getWorkTime(), TimeUtil.HM);
+                long lastEndTime =TimeUtil. str2Long(works.get(i - 1).getOffTime(), TimeUtil.HM);
+                long workTime = TimeUtil.str2Long(works.get(i).getWorkTime(), TimeUtil.HM);
                 start = TimeUtil.long2Str((lastEndTime + workTime) / 2, TimeUtil.HM);
             }
             if (works.size() > (i + 1)) {
-                long timeNew = str2Long(works.get(i).getOffTime(), TimeUtil.HM);
-                long timeNext = str2Long(works.get(i + 1).getWorkTime(), TimeUtil.HM);
+                long timeNew = TimeUtil.str2Long(works.get(i).getOffTime(), TimeUtil.HM);
+                long timeNext =TimeUtil. str2Long(works.get(i + 1).getWorkTime(), TimeUtil.HM);
                 end = TimeUtil.long2Str((timeNew + timeNext) / 2, TimeUtil.HM);
             } else {//最后一个
                 end = "24:00";
@@ -439,7 +440,7 @@ public class WorkPresenter implements OnHttpCallback {
                 if (!Utils.isEmpty(listdata)) {
                     String[] logs = new String[listdata.size()];
                     for (int i = 0; i < listdata.size(); i++)
-                        logs[i] = TimeUtil.long2Str(str2Long(JSONUtil.getText(listdata.getJSONObject(i), "cl_time"), TimeUtil.YMD_HMS), TimeUtil.HM);
+                        logs[i] = TimeUtil.long2Str(TimeUtil.str2Long(JSONUtil.getText(listdata.getJSONObject(i), "cl_time"), TimeUtil.YMD_HMS), TimeUtil.HM);
                     Arrays.sort(logs);
                     for (int i = 0; i < logs.length; i++) {
                         String timeLog = logs[i];

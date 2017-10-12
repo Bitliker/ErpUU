@@ -3,7 +3,7 @@ package com.gxut.bitliker.usoftchinauu.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.gxut.bitliker.baseutil.util.JSONUtil;
+import com.gxut.code.network.util.JSONUtil;
 
 import java.util.HashMap;
 import java.util.Map;
